@@ -64,6 +64,8 @@ struct CheckoutView_Previews: PreviewProvider {
     static let order = Order()
     
     static var previews: some View {
-        CheckoutView().environmentObject(order)
+        NavigationView {
+            CheckoutView().environmentObject(order)
+        }
     }
 }
