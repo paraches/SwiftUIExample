@@ -11,6 +11,7 @@ import SwiftUI
 struct CheckoutView: View {
     static let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
     static let tipAmounts = [10, 15, 20, 25, 0]
+    static let pickupTimes = ["Now", "Tonight", "Tomorrow Morning"]
 
     @EnvironmentObject var order: Order
     @State private var paymentType = 0
@@ -18,7 +19,8 @@ struct CheckoutView: View {
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1
     @State private var showingPaymentAlert = false
-    
+    @State private var pickupTime = 0
+
     var totalPrice: Double {
         let total = Double(order.total)
         let tipValue = total / 100 * Double(Self.tipAmounts[tipAmount])
@@ -45,6 +47,15 @@ struct CheckoutView: View {
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
+            
+            Section(header: Text("Picup time")) {
+                Picker("time:", selection: $pickupTime) {
+                    ForEach(0 ..< Self.pickupTimes.count) {
+                        Text(Self.pickupTimes[$0])
+                    }
+                }
+            }
+            
             Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")")
                 .font(.largeTitle)
             ) {
