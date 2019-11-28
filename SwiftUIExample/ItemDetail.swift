@@ -25,9 +25,20 @@ struct ItemDetail: View {
             }
             Text(item.description)
             .padding()
-            Button("Order This") {
+            
+            Button(action: {
                 self.order.add(item: self.item)
-            }.font(.headline)
+            }) {
+                HStack {
+                    Image(systemName: "cart.badge.plus")
+                    Text("Order This")
+                        .font(.headline)
+                }
+            }
+            .padding(8)
+            .background(Color(red: 0.9, green: 0.9, blue: 0.9))
+            .cornerRadius(4)
+
             Spacer()
         }
         .navigationBarTitle(Text(item.name), displayMode: .inline)
