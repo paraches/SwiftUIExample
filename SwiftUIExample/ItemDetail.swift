@@ -11,6 +11,17 @@ import SwiftUI
 struct ItemDetail: View {
     var item: MenuItem
     @EnvironmentObject var order: Order
+    @EnvironmentObject var userData: UserData
+    
+    var favoriteButton: some View {
+        Button(action: {
+            self.userData.toggleFavorite(self.item.id)
+        }) {
+            Image(systemName: self.userData.isFavorite(self.item.id) ? "heart.fill" : "heart")
+                .imageScale(.large)
+            .padding()
+        }
+    }
     
     var body: some View {
         VStack {
@@ -42,15 +53,17 @@ struct ItemDetail: View {
             Spacer()
         }
         .navigationBarTitle(Text(item.name), displayMode: .inline)
+        .navigationBarItems(trailing: favoriteButton)
     }
 }
 
 struct ItemDetail_Previews: PreviewProvider {
     static let order = Order()
+    static let userData = UserData()
     
     static var previews: some View {
         NavigationView {
-            ItemDetail(item: MenuItem.example).environmentObject(order)
+            ItemDetail(item: MenuItem.example).environmentObject(order).environmentObject(userData)
         }
     }
 }

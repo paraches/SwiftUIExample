@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B35328B0238FBEEE009E6E92 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35328AF238FBEEE009E6E92 /* UserData.swift */; };
+		B35328B2238FC036009E6E92 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35328B1238FC036009E6E92 /* FavoriteView.swift */; };
 		B39EBFBF23879CC600BC9675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39EBFBE23879CC600BC9675 /* AppDelegate.swift */; };
 		B39EBFC123879CC600BC9675 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39EBFC023879CC600BC9675 /* SceneDelegate.swift */; };
 		B39EBFC323879CC600BC9675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39EBFC223879CC600BC9675 /* ContentView.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B35328AF238FBEEE009E6E92 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B35328B1238FC036009E6E92 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		B39EBFBB23879CC600BC9675 /* SwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39EBFBE23879CC600BC9675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39EBFC023879CC600BC9675 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,10 +85,12 @@
 				B39EBFC023879CC600BC9675 /* SceneDelegate.swift */,
 				B39EBFC223879CC600BC9675 /* ContentView.swift */,
 				B39EBFDC2387BC1C00BC9675 /* ItemDetail.swift */,
+				B35328B1238FC036009E6E92 /* FavoriteView.swift */,
 				B39EBFDE2387C71C00BC9675 /* OrderView.swift */,
 				B39EBFE02387D01200BC9675 /* AppView.swift */,
 				B39EBFE22388468500BC9675 /* CheckoutView.swift */,
 				B39EBFDA2387B50500BC9675 /* ItemRow.swift */,
+				B35328AF238FBEEE009E6E92 /* UserData.swift */,
 				B39EBFC423879CC800BC9675 /* Assets.xcassets */,
 				B39EBFC923879CC800BC9675 /* LaunchScreen.storyboard */,
 				B39EBFCC23879CC800BC9675 /* Info.plist */,
@@ -180,7 +186,9 @@
 				B39EBFC123879CC600BC9675 /* SceneDelegate.swift in Sources */,
 				B39EBFDB2387B50500BC9675 /* ItemRow.swift in Sources */,
 				B39EBFC323879CC600BC9675 /* ContentView.swift in Sources */,
+				B35328B0238FBEEE009E6E92 /* UserData.swift in Sources */,
 				B39EBFDD2387BC1C00BC9675 /* ItemDetail.swift in Sources */,
+				B35328B2238FC036009E6E92 /* FavoriteView.swift in Sources */,
 				B39EBFDF2387C71C00BC9675 /* OrderView.swift in Sources */,
 				B39EBFD323879CED00BC9675 /* Helper.swift in Sources */,
 				B39EBFE12387D01200BC9675 /* AppView.swift in Sources */,
